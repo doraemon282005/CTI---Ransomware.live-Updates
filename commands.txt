@@ -1,0 +1,16 @@
+0. TO start virtual environment
+python -m venv venv
+
+1. To run instantly : 
+.\.venv\Scripts\python.exe main.py --run-once 
+
+2. To setup the task scheduler :
+Set-Location "C:\Users\shahm\OneDrive\Desktop\Mrunal Shah\Jobs and Internships\PwC\CTI\Ransomware.live Dashboard"
+Set-ExecutionPolicy -Scope Process Bypass
+.\install_task.ps1
+
+3. To Disable the task temporarily : 
+Disable-ScheduledTask -TaskName "RansomwareLive Telecom CTI Monitor"
+
+4. To completely remove the task : 
+Unregister-ScheduledTask -TaskName "RansomwareLive Telecom CTI Monitor" -Confirm:$false
